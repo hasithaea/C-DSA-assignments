@@ -25,11 +25,16 @@ int main()
     printf("Stack full =%d\n", isFull(&s));
 
     push(&s,1);
-        printf("Stack empty =%d\n", isEmpty(&s));
+
+    printf("Stack empty =%d\n", isEmpty(&s));
     printf("Stack full =%d\n", isFull(&s));
 
     push(&s,2);
     push(&s,3);
+
+    display(&s);
+
+    pop(&s);
 
     display(&s);
 
