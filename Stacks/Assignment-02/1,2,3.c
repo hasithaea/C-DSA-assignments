@@ -1,10 +1,10 @@
 #include <stdio.h>
-#define SIZE
+#define SIZE 5
 
 typedef struct 
 {
-    int data[SIZE];
     int top;
+    int data[SIZE];
 }stack;
 
 void init(stack*);
@@ -42,11 +42,6 @@ void init(stack*s)
     s->top=-1;
 }
 
-void push(stack*s, int d)
-{
-    if(isFull)
-}
-
 int isEmpty(stack*s)
 {
     return s->top==-1;
@@ -57,16 +52,21 @@ int isFull(stack*s)
     return s->top==SIZE-1;
 }
 
+int top(stack*s)
+{
+    return s->data[s->top];
+}
+
 void push(stack*s, int x)
 {
     if(isFull(s))
     {
-        printf("Stack full");
+        printf("Stack full\n");
     }
     else
     {
         s->top++;
-        s->items[s->top]=x;
+        s->data[s->top]=x;
     }
 }
 
@@ -74,12 +74,12 @@ int pop(stack*s)
 {
     if(isEmpty(s))
     {
-        printf("Stack empty");
+        printf("Stack empty\n");
         return -1;
     }
     else
     {
-        int a=s->itms[s->top];
+        int a=s->data[s->top];
         s->top--;
         return a;
     }
@@ -88,11 +88,13 @@ int pop(stack*s)
 void display(stack*s)
 {
     int i=s->top;
-    printf("Display stack\n====================");
+    printf("\nDisplay stack\n====================\n");
 
     while(i>=0)
     {
-        printf("%d", s->items[i]);
+        printf("%d ", s->data[i]);
         i--;
     }
+
+    printf("\n");
 }
