@@ -1,8 +1,6 @@
 #include <stdio.h>
 #define SIZE 10
 
-typedef int data;
-
 typedef struct 
 {
     int size;
@@ -18,8 +16,8 @@ typedef enum
 }boolean;
 
 void init(queue*);
-int isEmpty(queue*);
-int isFull(queue*);
+boolean isEmpty(queue*);
+boolean isFull(queue*);
 void enqueue(queue*, int);
 int dequeue(queue*);
 int getFront(queue*);
@@ -47,7 +45,7 @@ boolean isEmpty(queue*q)
 
 boolean isFull(queue*q)
 {
-    if(q->size==SIZE)
+    if(q->rear==SIZE-1)
         return TRUE;
     else
         return FALSE;
