@@ -26,41 +26,13 @@ typedef struct
 
 ## Functions Implemented
 
-### 1. initialize()
-
-Initializes the stack by setting:
-
-* `top = -1`
-
-
-### 2. push()
-
-Inserts an element into the stack.
-
-
-### 3. pop()
-
-Removes and returns the top element.
-
-
-### 4. top()
-
-Returns the current top element without removing it.
-
-
-### 5. isEmpty()
-
-Checks whether the stack is empty.
-
-
-### 6. isFull()
-
-Checks whether the stack is full.
-
-
-### 7. display()
-
-Displays all elements in the stack from top to bottom.
+* `initialize()` - Initializes the stack by setting: top = -1
+* `push()` - Inserts an element into the stack.
+* `pop()` - Removes and returns the top element.
+* `top()` -   Returns the current top element without removing it.
+* `isEmpty()` - Checks whether the stack is empty.
+* `isFull()` - Checks whether the stack is full.
+* `display()` - Displays all elements in the stack from top to bottom.
 
 
 ## Stack Operations Demonstration

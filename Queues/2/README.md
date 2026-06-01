@@ -24,13 +24,13 @@ Using the previously implemented queue structure and functions, the program perf
 
 ## Functions Used
 
-* `init()` → Initializes the queue
-* `isEmpty()` → Checks if queue is empty
-* `isFull()` → Checks if queue is full
-* `enqueue()` → Inserts an element into the queue
-* `dequeue()` → Removes an element from the queue
-* `getFront()` → Retrieves the front element
-* `display()` → Displays queue contents
+* `init()` - Initializes the queue
+* `isEmpty()` - Checks if queue is empty
+* `isFull()` - Checks if queue is full
+* `enqueue()` - Inserts an element into the queue
+* `dequeue()` - Removes an element from the queue
+* `getFront()` - Retrieves the front element
+* `display()` - Displays queue contents
 
 ## Data Structure
 
