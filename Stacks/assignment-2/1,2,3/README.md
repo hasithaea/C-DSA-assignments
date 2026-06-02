@@ -69,3 +69,8 @@ Stack: 2 1
 * `top = -1` means the stack is empty
 * `top = SIZE - 1` means the stack is full
 * Overflow and underflow conditions are handled using `isFull()` and `isEmpty()`
+
+
+## Academic Context
+
+This program was developed as part of the **CSC1223 – Data Structures and Algorithms** course in the **Bachelor of Computer Science** degree program at the University of Ruhuna, Sri Lanka.

@@ -60,3 +60,6 @@ Insert 5 items → Rear moves forward
 Display
 ```
 
+## Academic Context
+
+This program was developed as part of the **CSC1223 – Data Structures and Algorithms** course in the **Bachelor of Computer Science** degree program at the University of Ruhuna, Sri Lanka.
