@@ -32,6 +32,14 @@ This repository includes implementations of core data structures and algorithmic
 | **Environment** | Linux (WSL) |
 | **Version Control** | Git, GitHub |
 
+## Environment Setup
+
+This repository was developed and tested using Ubuntu on Windows Subsystem for Linux (WSL).
+
+For detailed installation and configuration instructions, see:
+
+📄 **[WSL Setup Guide](docs/wsl-setup.md)**
+
 ## Academic Context
 
 Coursework and programming assignments completed for **CSC1223 – Data Structures and Algorithms**, as part of the Bachelor of Computer Science degree at the **University of Ruhuna, Sri Lanka**.
