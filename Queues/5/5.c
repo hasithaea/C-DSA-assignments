@@ -28,18 +28,12 @@ void init(busQueue *q){
 
 //empty
 boolean isEmpty(busQueue *q){
-    if(q->size==0)
-        return TRUE;
-    else
-        return FALSE;
+    return (q->size==0) ? TRUE : FALSE;
 }
 
 //Full
 boolean isFull(busQueue *q){
-    if(q->size==SIZE)
-        return TRUE;
-    else
-        return FALSE;
+    return (q->size==SIZE) ? TRUE : FALSE;
 }
 
 //empty queue
@@ -105,6 +99,7 @@ void display(busQueue *q){
     }
 }
 
+//count
 int busCount(busQueue *q){
     return q->size;
 }
@@ -145,7 +140,7 @@ int main()
 
     printf("\n====Waiting Bueses====\n");
     display(&q);
-    printf("Total buses waiting: %d\n", busCount(&q));
+    printf("Total buses waiting: %d\n\n", busCount(&q));
 
     return 0;
 }
