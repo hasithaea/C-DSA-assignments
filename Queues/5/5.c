@@ -54,7 +54,7 @@ bus emptyBusQueue(){
 
 //increment
 int increment(int x){
-    if(++x=SIZE)
+    if(++x==SIZE)
         x=0;
     return x;
 }
@@ -121,29 +121,29 @@ int main()
     bus b5 = {5, "NB8978"};
     bus b6 = {6, "NE9977"};
 
-    printf("=========Buses Arriving==========\n");
+    //Buses Arriving
     enqueue(&q, b1);
     enqueue(&q, b2);
     enqueue(&q, b3);
 
-    printf("==============Waiting buses==================");
+    printf("\n====Waiting buses====\n");
     display(&q);
 
-    printf("====================Total buses waiting=====================");
+    printf("\n====Total buses waiting====\n");
     printf("%d\n", busCount(&q));
 
-    printf("==================Bus Departing==============\n");
+    printf("\n====Bus Departing====\n");
     bus left = dequeue(&q);
     if(left.busID != 0){
         printf("Bus Left: (%d) %s\n", left.busID, left.busRegNum);
     }
 
-    printf("===================New arrivals==========\n");
+    //Newly joined
     enqueue(&q, b4);
     enqueue(&q, b5);
     enqueue(&q, b6);
 
-    printf("==================Final Waiting Bueses==========\n");
+    printf("\n====Waiting Bueses====\n");
     display(&q);
     printf("Total buses waiting: %d\n", busCount(&q));
 
