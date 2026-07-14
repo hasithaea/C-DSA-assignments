@@ -73,14 +73,14 @@ int main()
 
     int n = strlen(word);
 
-    while(n>=i){
+    while(n>i){
         push(&s,word[i]);
         i++;
     }
 
     printf("Reversed: \n");
 
-    while(n>=j){
+    while(n>j){
         printf("%c", pop(&s));
         j++;
     }
