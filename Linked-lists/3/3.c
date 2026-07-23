@@ -24,7 +24,7 @@ int isEmpty(stack *s) {
 //push
 void push(stack *s, char d) {
     Node *newNode = (Node*)malloc(sizeof(Node));
-    newNode->data=d;
+    newNode->Data=d;
     newNode->Next=s->top;
     s->top=newNode;
 }
@@ -64,39 +64,58 @@ void display(stack *s) {
 }
 
 //symbol check
-int check(char front, char rear) {
-    if(front='(' && rear=')' ) 
+int isMatch(char front, char rear) {
+    if(front=='(' && rear==')' ) 
         return 1;
-    if (front='[' && rear=']') 
+    if (front=='[' && rear==']') 
         return 1;
-    if (front='{' && rear='}')
+    if (front=='{' && rear=='}')
         return 1;
     else 
-        return -1;
+        return 0;
 }
 
 //main
 int main()
 {
-    char word[10];
+    char word[20];
     char front,rear;
 
+    stack s; 
     init(&s);
 
     printf("Enter the line: \n");
     scanf("%s", word);
 
     for(int i=0; i<strlen(word); i++) {
-        if(word[i]='(' || word[i]='[' || word[i]='{') {
+        if(word[i]=='(' || word[i]=='[' || word[i]=='{') {
             push(&s, word[i]);
         }
-        else if(word[i]=')' || word[i]=']' || word[i]='}') {
-            rear=pop(&s);
+        else if(word[i]==')' || word[i]==']' || word[i]=='}') {
+
+            if(isEmpty(&s)) {
+                printf("Parentheses are not matching\n");
+                return 0;
+            }
+
+            front=pop(&s);
+            rear=word[i];
+
+            if(!isMatch(front, rear)) {
+                printf("paranthesis are not matching\n");
+                return 0;
+            }
         }
 
-        if(check)
     }
 
-    
+    if(isEmpty(&s)) {
+        printf("Paranthesis are matching\n");
+    }
+    else {
+        printf("Parentheses are not matching\n");
+    }
+
+    return 0;
 
 }
