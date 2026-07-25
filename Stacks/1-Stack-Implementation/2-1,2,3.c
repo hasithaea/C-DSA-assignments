@@ -1,8 +1,7 @@
 #include <stdio.h>
 #define SIZE 5
 
-typedef struct 
-{
+typedef struct {
     int top;
     int data[SIZE];
 }stack;
@@ -42,61 +41,49 @@ int main()
 }
 
 
-void init(stack*s)
-{
+void init(stack*s) {
     s->top=-1;
 }
 
-int isEmpty(stack*s)
-{
+int isEmpty(stack*s) {
     return s->top==-1;
 }
 
-int isFull(stack*s)
-{
+int isFull(stack*s) {
     return s->top==SIZE-1;
 }
 
-int top(stack*s)
-{
+int top(stack*s) {
     return s->data[s->top];
 }
 
-void push(stack*s, int x)
-{
-    if(isFull(s))
-    {
+void push(stack*s, int x) {
+    if(isFull(s)) {
         printf("Stack full\n");
     }
-    else
-    {
+    else {
         s->top++;
         s->data[s->top]=x;
     }
 }
 
-int pop(stack*s)
-{
-    if(isEmpty(s))
-    {
+int pop(stack*s) {
+    if(isEmpty(s)) {
         printf("Stack empty\n");
         return -1;
     }
-    else
-    {
+    else {
         int a=s->data[s->top];
         s->top--;
         return a;
     }
 }
 
-void display(stack*s)
-{
+void display(stack*s) {
     int i=s->top;
     printf("\nDisplay stack\n====================\n");
 
-    while(i>=0)
-    {
+    while(i>=0) {
         printf("%d ", s->data[i]);
         i--;
     }
