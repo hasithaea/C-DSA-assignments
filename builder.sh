@@ -25,16 +25,16 @@ if [ -z "$CFILE" ]; then
 fi
 
 REL_PATH="${CURRENT_DIR#$ROOT_DIR/}"
-FILE_NAME="$(basename "$CFILE" .c)" 
+FILE_NAME="$(basename "$CFILE" .c)"
 
 OUT_NAME=$(echo "$REL_PATH/$FILE_NAME" | sed 's#/#_#g')
 OUT="$ROOT_DIR/compiled-files/$OUT_NAME"
 
 mkdir -p "$ROOT_DIR/compiled-files"
 
-echo "Compiling $CFILE -> compiled-files/$OUT_NAME"
 gcc "$CFILE" -o "$OUT"
-
-echo "Running:"
-echo "-------------------------"
+echo "Build successful."
+echo "Running..."
+echo ""
 "$OUT"
+echo ""
