@@ -7,3 +7,9 @@
 compiled-files
 
 # ongoing 
+
+#builder.sh rule
+cat >> .gitignore << 'EOF'
+**/builder.sh
+!/builder.sh
+EOF
