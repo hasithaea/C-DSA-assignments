@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 
 void bubbleSort(int arr[], int n) {
     int i, j, temp;
@@ -23,7 +22,7 @@ int main()
     int arr[] = {5,8,9,1,3,2,7};
     int n = sizeof(arr)/sizeof(arr[0]);
 
-    printf("Before:\n");
+    printf("Unsorted Array:\n");
     for(int i=0; i<n; i++) 
         printf("%d ", arr[i]);
     
@@ -31,7 +30,7 @@ int main()
 
     bubbleSort(arr, n);
 
-    printf("After:\n");
+    printf("Sorted Array:\n");
     for(int j=0; j<n; j++) 
         printf("%d ", arr[j]);
     
