@@ -75,6 +75,34 @@ int length (list *l) {
     return count;
 }
 
+void addAt (list *l, int x, int loc) {
+    int size = length(l);
+
+    if(loc < 1 || loc > size+1) {
+        printf("Invalid Location.\n");
+    }
+    else if (loc == 1) {
+        addFirst(l, x);
+    }
+    else if (loc == size+1) {
+        addEnd(l, x);
+    }
+    else {
+        listNode *newNode = (listNode*)malloc(sizeof(listNode));
+
+        newNode->data = x;
+
+        listNode *temp = l->head;
+
+        for(int i=1; i < loc -1; i++) {
+            temp = temp->next;
+        }
+
+        newNode->next = temp->next;
+        temp->next = newNode;
+    }
+}
+
 int search (list *l, int x) {
     listNode *temp = l->head;
 
@@ -92,7 +120,7 @@ int main ()
 {
     list l;
     int option;
-    int a,b,c;
+    int a,b,c1,c2,d;
 
     initialize(&l);
 
@@ -102,10 +130,11 @@ int main ()
 
         printf("1. Add to the front\n");
         printf("2. Add to the end\n");
-        printf("3. Display the list\n");
-        printf("4. No of elements in the list\n");
-        printf("5. Search an element\n");
-        printf("6. Exit\n");
+        printf("3. Add at location\n");
+        printf("4. Display the list\n");
+        printf("5. No of elements in the list\n");
+        printf("6. Search an element\n");
+        printf("7. Exit\n");
         printf("Enter your option: ");
 
         scanf("%d", &option);
@@ -125,28 +154,36 @@ int main ()
                 break;
 
             case 3:
+                printf("Enter number: ");
+                scanf("%d", &c1);
+                printf("Enter location: ");
+                scanf("%d", &c2);
+                addAt(&l, c1, c2);
+                break;
+
+            case 4:
                 printf("The current list: \n");
                 display(&l);
                 break;
 
-            case 4:
+            case 5:
                 printf("There is/are %d element/s in the list\n", length(&l));
                 break;
 
-            case 5:
+            case 6:
                 printf("Enter the number to search\n");
-                scanf("%d", &c);
+                scanf("%d", &d);
 
-                if( search(&l, c)) {
-                    printf("%d Found\n", c);
+                if( search(&l, d)) {
+                    printf("%d Found !\n", d);
                 }
                 else {
-                    printf("%d Not found\n", c);
+                    printf("%d Not found !\n", d);
                 }
 
                 break;
 
-            case 6:
+            case 7:
                 printf("Exiting...");
                 break;
 
