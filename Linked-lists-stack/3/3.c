@@ -102,7 +102,7 @@ int main()
             rear=word[i];
 
             if(!isMatch(front, rear)) {
-                printf("paranthesis are not matching\n");
+                printf("Parentheses are not matching\n");
                 return 0;
             }
         }
@@ -110,7 +110,7 @@ int main()
     }
 
     if(isEmpty(&s)) {
-        printf("Paranthesis are matching\n");
+        printf("Parentheses are matching\n");
     }
     else {
         printf("Parentheses are not matching\n");
