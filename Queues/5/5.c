@@ -138,7 +138,7 @@ int main()
     enqueue(&q, b5);
     enqueue(&q, b6);
 
-    printf("\n====Waiting Bueses====\n");
+    printf("\n====Waiting Buses====\n");
     display(&q);
     printf("Total buses waiting: %d\n\n", busCount(&q));
 
